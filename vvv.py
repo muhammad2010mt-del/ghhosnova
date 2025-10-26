@@ -1,3 +1,5 @@
+from telegram import Update
+from telegram.ext import ContextTypes
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 import json
@@ -13,8 +15,6 @@ def load_dictionary():
     else:
         return {
             # Существующие слова
-            'мама': 'нин',
-           
             'мыхе': 'родной',
             'хед': 'вода',
             'тыла': 'собака',
@@ -10554,6 +10554,4 @@ if __name__== "__main__":
     print("📢 Канал: https://t.me/Rutultranslate")
     print("💾 Загружено слов в словаре:", len(dictionary))
 
-
     app.run_polling()
-
